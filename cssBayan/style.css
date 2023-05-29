@@ -1,0 +1,72 @@
+body {
+    background-color: midnightblue;
+    color: white;
+}
+
+h1 {
+   text-align: center;
+}
+
+.accordion {
+    max-width: 635px;
+    margin: 0 auto;
+}
+
+.meme-item {
+    margin-bottom: 5px;
+    border: 2px solid royalblue;
+}
+
+.meme-content {
+    display: none;
+    padding: 10px 15px;
+}
+
+.meme-title {
+    display: block;
+    cursor: pointer;
+    position: relative;
+    padding: 10px 15px;
+    transition: background .3s ease-out;
+}
+
+.meme-title:hover {
+    background-color: gray;
+}
+
+.meme-title:after {
+    content: "";
+    display: block;
+
+    border-style: solid;
+    border-width: 8px 5px 0 5px;
+    border-color: white 
+    transparent transparent transparent;
+
+    position: absolute;
+    top: 50%;
+    right: 20px;
+
+    transform: translateY(-50%);
+}
+
+.meme-input { /*скрыть кнопку*/    
+    appearance: none; 
+    position: absolute;
+}
+
+.meme-input:checked ~ .meme-content {
+    display: block;
+}
+
+.meme-input:checked ~ .meme-title {
+    background-color: gray;
+}
+
+.meme-input:checked ~ .meme-title::after {
+    border-style: solid;
+    border-width: 0 5px 8px 5px;
+    border-color:
+    transparent transparent white 
+    transparent;
+}
