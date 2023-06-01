@@ -98,7 +98,19 @@ h1 {
         font-size: 14px;
     }
     
-    img {
+    img { 
         width: 350px;
     }
+
+    .meme-input:checked ~ .meme-image {
+        height: auto;
+     }
+
+     .meme-input:hover ~ .meme-image {
+        height: auto;
+    } 
+    
+    .meme-item:hover .meme-image {
+        height: auto;
+    } 
 }
