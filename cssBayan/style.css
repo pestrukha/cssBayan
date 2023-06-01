@@ -15,13 +15,9 @@ h1 {
 
 .meme-item {
     margin-bottom: 5px;
-    border: 2px solid royalblue;
+    border: 2px solid royalblue;  
 }
-
-.meme-content { 
-    padding: 10px 15px;    
-}
-
+ 
 .meme-title {
     display: block;
     cursor: pointer;
@@ -29,10 +25,7 @@ h1 {
     padding: 10px 15px;
     transition: 1s;
 }
-
-.meme-title:hover {
-    background-color: gray;    
-}
+ 
 
 .meme-title:after {
     content: "";
@@ -52,21 +45,20 @@ h1 {
 }
 
 .meme-input { /*скрыть кнопку*/    
-    appearance: none; 
-    position: absolute; 
+    appearance: none;     
 }
 
 .meme-input:checked ~ .meme-image {
-   scroll-behavior: smooth;
+   height: 350px;
 }
 
 .meme-input:hover ~ .meme-image {
     height: 350px;
-}
+} 
 
-.meme-input:checked ~ .meme-title {
-    background-color: gray; 
-}
+.meme-item:hover .meme-image {
+    height: 350px;
+} 
 
 .meme-input:hover ~ .meme-title::after {
     border-style: solid;
@@ -80,6 +72,10 @@ h1 {
     padding: 10px 15px;    
     height: 0;
     transition: 2s;
+}
+
+.meme-image:hover {
+    height: 350px;
 }
 
 #first-image { 
