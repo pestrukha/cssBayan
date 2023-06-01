@@ -1,6 +1,7 @@
 body {
     background-color: midnightblue;
     color: white;
+    font-size: 18px; 
 }
 
 h1 {
@@ -17,9 +18,8 @@ h1 {
     border: 2px solid royalblue;
 }
 
-.meme-content {
-    display: none;
-    padding: 10px 15px;
+.meme-content { 
+    padding: 10px 15px;    
 }
 
 .meme-title {
@@ -27,11 +27,11 @@ h1 {
     cursor: pointer;
     position: relative;
     padding: 10px 15px;
-    transition: background .3s ease-out;
+    transition: 1s;
 }
 
 .meme-title:hover {
-    background-color: gray;
+    background-color: gray;    
 }
 
 .meme-title:after {
@@ -48,25 +48,61 @@ h1 {
     right: 20px;
 
     transform: translateY(-50%);
+    transition: 1s;
 }
 
 .meme-input { /*скрыть кнопку*/    
     appearance: none; 
-    position: absolute;
+    position: absolute; 
 }
 
-.meme-input:checked ~ .meme-content {
-    display: block;
+.meme-input:checked ~ .meme-image {
+   scroll-behavior: smooth;
+}
+
+.meme-input:hover ~ .meme-image {
+    height: 350px;
 }
 
 .meme-input:checked ~ .meme-title {
-    background-color: gray;
+    background-color: gray; 
 }
 
-.meme-input:checked ~ .meme-title::after {
+.meme-input:hover ~ .meme-title::after {
     border-style: solid;
     border-width: 0 5px 8px 5px;
     border-color:
     transparent transparent white 
     transparent;
+}
+
+.meme-image {
+    padding: 10px 15px;    
+    height: 0;
+    transition: 2s;
+}
+
+#first-image { 
+    height: 100%;
+}
+
+
+@media (max-width: 1280px) {
+    body {
+        font-size: 16px;
+    }
+    
+    img {
+        width: 500px;
+    }
+}
+
+@media (max-width: 640px) {
+    body {
+        font-size: 14px;
+    }
+    
+    img {
+        width: 350px;
+    }
 }
